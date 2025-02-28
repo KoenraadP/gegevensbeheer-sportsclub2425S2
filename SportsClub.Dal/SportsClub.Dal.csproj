@@ -55,6 +55,10 @@
     <Compile Include="Migrations\202502280925546_CreateDb.Designer.cs">
       <DependentUpon>202502280925546_CreateDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202502280958276_AddActivitiesTable.cs" />
+    <Compile Include="Migrations\202502280958276_AddActivitiesTable.Designer.cs">
+      <DependentUpon>202502280958276_AddActivitiesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SportsClubDbContext.cs" />
@@ -72,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202502280925546_CreateDb.resx">
       <DependentUpon>202502280925546_CreateDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502280958276_AddActivitiesTable.resx">
+      <DependentUpon>202502280958276_AddActivitiesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

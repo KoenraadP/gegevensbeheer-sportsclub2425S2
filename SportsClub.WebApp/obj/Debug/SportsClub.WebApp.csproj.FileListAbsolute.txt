@@ -178,3 +178,5 @@ D:\gegevensbeheer2425s2\lesmap\L8\SportsClub\SportsClub.WebApp\obj\Debug\SportsC
 D:\gegevensbeheer2425s2\lesmap\L8\SportsClub\SportsClub.WebApp\obj\Debug\SportsCl.75FC8D4E.Up2Date
 D:\gegevensbeheer2425s2\lesmap\L8\SportsClub\SportsClub.WebApp\obj\Debug\SportsClub.WebApp.dll
 D:\gegevensbeheer2425s2\lesmap\L8\SportsClub\SportsClub.WebApp\obj\Debug\SportsClub.WebApp.pdb
+D:\gegevensbeheer2425s2\lesmap\L8\SportsClub\SportsClub.WebApp\bin\SportsClub.Entities.dll
+D:\gegevensbeheer2425s2\lesmap\L8\SportsClub\SportsClub.WebApp\bin\SportsClub.Entities.pdb

@@ -21,5 +21,11 @@ namespace SportsClub.Entities
             FirstName = firstName;
             LastName = lastName;
         }
+
+        // lege constructor, dit is vereist voor de Seed() methode
+        public Member()
+        {
+            
+        }
     }
 }

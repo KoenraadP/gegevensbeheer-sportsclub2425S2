@@ -13,6 +13,7 @@ namespace SportsClub.Dal
         // properties --> dit worden uiteindelijk tabellen in mijn db
         // de naam van de property wordt dan de naam van de tabel in de db
         public DbSet<Member> Members { get; set; }
+        public DbSet<Activity> Activities { get; set; }
 
         // in de constructor leggen we de link naar onze database server
         // en de specifieke databank die we willen bereiken
