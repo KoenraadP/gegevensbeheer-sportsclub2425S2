@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SportsClub.Entities
 {
-    class Member
+    public class Member
     {
         // key property --> voor de Primary Key in de databank
         [Key]
