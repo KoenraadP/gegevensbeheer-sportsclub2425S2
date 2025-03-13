@@ -17,10 +17,17 @@ namespace SportsClub.Dal
 
         // in de constructor leggen we de link naar onze database server
         // en de specifieke databank die we willen bereiken
+        // versie hieronder is voor Creo toestellen
         public SportsClubDbContext() : base(@"Data Source=.\sqlexpress;Initial Catalog=SportsClubDb;User Id=creo;Password=creo")
         {
             
         }
+
+        // versie hieronder is voor eigen toestel
+        /*public SportsClubDbContext() : base(@"Data Source=.\sqlexpress;Initial Catalog=SportsClubDb;Integrated Security=True")
+        {
+
+        }*/
 
         // database commando's
         // uit te voeren in de package manager console
