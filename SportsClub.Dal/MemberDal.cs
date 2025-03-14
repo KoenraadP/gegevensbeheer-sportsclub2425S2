@@ -15,6 +15,7 @@ namespace SportsClub.Dal
         // Create, Read, Update, Delete
 
         // Read All
+
         // alle members ophalen uit databank
         // niet vergeten bovenaan using SportsClub.Entities te plaatsen
         // indien nodig om Member te kunnen gebruiken
@@ -33,6 +34,24 @@ namespace SportsClub.Dal
                 List<Member> lstMembers = db.Members.ToList();
                 // lijst van members als return
                 return lstMembers;
+            }
+        }
+
+        // Read One
+        // methode om één member op te halen uit de db
+        public static Member ReadOne(int id)
+        {
+            using (var db = new SportsClubDbContext())
+            {
+                // member ophalen uit db
+                // entityframework zal voor onderstaande code
+                // automatisch de juiste sql query maken en uitvoeren
+                // (select * from Members where Id = id)
+                // met de .Find() methode kun je naar één specifieke
+                // record gaan zoeken op basis van de primary key (id)
+                Member member = db.Members.Find(id);
+                // member als return
+                return member;
             }
         }
     }

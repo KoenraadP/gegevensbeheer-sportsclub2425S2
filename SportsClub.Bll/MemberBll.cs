@@ -34,5 +34,18 @@ namespace SportsClub.Bll
             // lijst van members als return
             return lstMembers;
         }
+
+        // methode om één member op te halen via de Dal 
+        // hierin gaan we ook controleren of we effectief
+        // een member terug krijgen, anders exception aanmaken
+        public static Member ReadOne(int id)
+        {
+            Member m = MemberDal.ReadOne(id);
+            if (m == null)
+            {
+                throw new Exception("Member not found");
+            }
+            return m;
+        }
     }
 }
