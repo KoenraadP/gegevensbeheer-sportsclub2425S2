@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityDal.cs" />
     <Compile Include="MemberDal.cs" />
     <Compile Include="Migrations\202503130923343_createdb.cs" />
     <Compile Include="Migrations\202503130923343_createdb.Designer.cs">

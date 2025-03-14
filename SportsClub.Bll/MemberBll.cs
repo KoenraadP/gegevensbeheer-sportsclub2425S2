@@ -8,15 +8,19 @@ using SportsClub.Dal;
 
 namespace SportsClub.Bll
 {
-    public class MemberBll
+    // als je een class 'static' maakt
+    // dan kun je deze class gewoon overal gebruiken als bvb MemberBll.ReadAll()
+    // je moet nooit een variabele maken of met 'new' werken
+    // maar je moet ook ALLE methodes die erin staan static maken
+    public static class MemberBll
     {
         // Read All
         // opnieuw de using SportsClub.Entities niet vergeten
         // en using SportsClub.Dal
-        public List<Member> ReadAll()
+        public static List<Member> ReadAll()
         {
             // methode uit Dal gebruiken
-            List<Member> lstMembers = new MemberDal().ReadAll();
+            List<Member> lstMembers = MemberDal.ReadAll();
 
             // controleren of we effectief een correcte lijst krijgen
             // en of deze lijst niet leeg is
