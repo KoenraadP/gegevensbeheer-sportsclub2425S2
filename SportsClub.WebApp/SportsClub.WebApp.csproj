@@ -162,6 +162,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActivitiesController.cs" />
     <Compile Include="Controllers\CafetariaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -248,6 +249,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Cafetaria\Index.cshtml" />
     <Content Include="Views\Members\Index.cshtml" />
+    <Content Include="Views\Equipment\Create.cshtml" />
+    <Content Include="Views\Activities\Index.cshtml" />
+    <Content Include="Views\Members\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,6 +285,10 @@
     <Content Include="Scripts\jquery-3.7.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SportsClub.Bll\SportsClub.Bll.csproj">
+      <Project>{1ca33600-9b3f-45e7-b18a-f7beb057fd7a}</Project>
+      <Name>SportsClub.Bll</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SportsClub.Entities\SportsClub.Entities.csproj">
       <Project>{a82aa2e0-3fd4-4075-bb4e-3159a7590cf1}</Project>
       <Name>SportsClub.Entities</Name>
