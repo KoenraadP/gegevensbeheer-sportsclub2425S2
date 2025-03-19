@@ -34,5 +34,27 @@ namespace SportsClub.WebApp.Controllers
                 return View("Error");
             }
         }
+
+        // Details methode om info over 
+        // één activity specifiek op te vragen
+        // deze MOET de naam Details hebben omdat dit zo al
+        // vastgelegd werd in de Index view bij de links
+        public ActionResult Details(int id)
+        {
+            try
+            {
+                // activity opvragen via Bll
+                Activity a = ActivityBll.ReadOne(id);
+                // activity doorgeven aan view
+                // View aanmaken met RMK op View, add view
+                // template Details - model Activity
+                return View(a);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
+        }
     }
 }

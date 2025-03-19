@@ -26,5 +26,23 @@ namespace SportsClub.Dal
                 return lstActivities;
             }
         }
+
+        // Read One
+        // methode om één activity op te halen uit de db
+        public static Activity ReadOne(int id)
+        {
+            using (var db = new SportsClubDbContext())
+            {
+                // activity ophalen uit db
+                // entityframework zal voor onderstaande code
+                // automatisch de juiste sql query maken en uitvoeren
+                // (select * from Activities where Id = id)
+                // met de .Find() methode kun je naar één specifieke
+                // record gaan zoeken op basis van de primary key (id)
+                Activity activity = db.Activities.Find(id);
+                // member als return
+                return activity;
+            }
+        }
     }
 }

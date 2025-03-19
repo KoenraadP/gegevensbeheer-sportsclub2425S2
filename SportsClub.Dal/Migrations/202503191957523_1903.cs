@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddRelations : DbMigration
+    public partial class _1903 : DbMigration
     {
         public override void Up()
         {
@@ -20,6 +20,8 @@
                 .Index(t => t.Member_MemberId)
                 .Index(t => t.Activity_ActivityId);
             
+            AlterColumn("dbo.Members", "FirstName", c => c.String());
+            AlterColumn("dbo.Members", "LastName", c => c.String());
         }
         
         public override void Down()
@@ -28,6 +30,8 @@
             DropForeignKey("dbo.MemberActivities", "Member_MemberId", "dbo.Members");
             DropIndex("dbo.MemberActivities", new[] { "Activity_ActivityId" });
             DropIndex("dbo.MemberActivities", new[] { "Member_MemberId" });
+            AlterColumn("dbo.Members", "LastName", c => c.String(nullable: false));
+            AlterColumn("dbo.Members", "FirstName", c => c.String(nullable: false, maxLength: 20));
             DropTable("dbo.MemberActivities");
         }
     }

@@ -27,5 +27,18 @@ namespace SportsClub.Bll
             // lijst van activities als return
             return lstActivities;
         }
+
+        // methode om één activity op te halen via de Dal 
+        // hierin gaan we ook controleren of we effectief
+        // een activity terug krijgen, anders exception aanmaken
+        public static Activity ReadOne(int id)
+        {
+            Activity a = ActivityDal.ReadOne(id);
+            if (a == null)
+            {
+                throw new Exception("Activity not found");
+            }
+            return a;
+        }
     }
 }

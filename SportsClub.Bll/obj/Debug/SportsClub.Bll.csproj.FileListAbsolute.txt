@@ -40,3 +40,17 @@ C:\Users\koenraad.pecceu\Documents\gegevensbeheer\gegevensbeheer-sportsclub2425S
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\gegevensbeheer-sportsclub2425S2\SportsClub.Bll\obj\Debug\SportsCl.316779D9.Up2Date
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\gegevensbeheer-sportsclub2425S2\SportsClub.Bll\obj\Debug\SportsClub.Bll.dll
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\gegevensbeheer-sportsclub2425S2\SportsClub.Bll\obj\Debug\SportsClub.Bll.pdb
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\bin\Debug\SportsClub.Bll.dll
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\bin\Debug\SportsClub.Bll.pdb
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\bin\Debug\SportsClub.Dal.dll
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\bin\Debug\SportsClub.Entities.dll
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\bin\Debug\EntityFramework.dll
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\bin\Debug\SportsClub.Dal.pdb
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\bin\Debug\SportsClub.Dal.dll.config
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\bin\Debug\SportsClub.Entities.pdb
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\bin\Debug\EntityFramework.xml
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\obj\Debug\SportsClub.Bll.csproj.AssemblyReference.cache
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\obj\Debug\SportsClub.Bll.csproj.CoreCompileInputs.cache
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\obj\Debug\SportsCl.316779D9.Up2Date
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\obj\Debug\SportsClub.Bll.dll
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Bll\obj\Debug\SportsClub.Bll.pdb
