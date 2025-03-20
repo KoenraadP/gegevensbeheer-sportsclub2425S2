@@ -67,5 +67,32 @@ namespace SportsClub.WebApp.Controllers
         {
             return View();
         }
+
+        // [HttpPost] duidt aan dat dit de methode is
+        // die moet aangesproken worden bij het verzenden van
+        // onze POST form
+        // parameters moeten exact gespeld zijn zoals de properties van de Member class
+        [HttpPost]
+        public ActionResult Create(string firstName, string lastName)
+        {
+            // de Create methode uit de Bll uitvoeren en resultaat (true/false opslaan)
+            bool memberCreated = MemberBll.Create(firstName, lastName);
+
+            // als het aanmaken van de member gelukt is
+            if (memberCreated)
+            {
+                // Feedback boodschap plaatsen in de ViewBag
+                ViewBag.Feedback = firstName + " " + lastName + " added.";
+            }
+            else
+            {
+                // Feedback boodschap plaatsen in de ViewBag
+                ViewBag.Feedback = "Something went wrong - failed to add member.";
+            }
+
+            // opnieuw naar de Create view gaan en 
+            // feedback boodschap tonen
+            return View();
+        }
     }
 }

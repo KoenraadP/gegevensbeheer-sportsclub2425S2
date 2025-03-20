@@ -6,6 +6,9 @@
 
 <h2>Create</h2>
 
+@* feedback van Create tonen *@
+<p>@ViewBag.Feedback</p>
+
 @* Html.BeginForm is ongeveer hetzelfde als zelf een <form> plaatsen *@
 @* dit formulier zal automatisch data versturen naar de Create methode uit de bijhorende controller *@
 @using (Html.BeginForm()) 
