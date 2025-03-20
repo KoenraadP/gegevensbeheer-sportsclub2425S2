@@ -54,12 +54,26 @@ namespace SportsClub.Bll
         // via het Create formulier
         public static bool Create(string firstName, string lastName)
         {
-            // Member aanmaken met data
-            Member member = new Member(firstName, lastName);
-            // Dal methode uitvoeren
-            bool memberCreated = MemberDal.Create(member);
-            // waarde van memberCreated als return (true of false)
-            return memberCreated;
+            // spaties voor en na de namen verwijderen
+            firstName = firstName.Trim();
+            lastName = lastName.Trim();
+
+            // nog eens extra controleren of de namen
+            // niet 'null' of volledig leeg zijn
+            if (!string.IsNullOrEmpty(firstName)
+                && !string.IsNullOrEmpty(lastName))
+            {
+                // Member aanmaken met data
+                Member member = new Member(firstName, lastName);
+                // Dal methode uitvoeren
+                bool memberCreated = MemberDal.Create(member);
+                // waarde van memberCreated als return (true of false)
+                return memberCreated;
+            }
+
+            // als het toch ergens fout gelopen is met de if voorwaarde
+            // geef dan false als resultaat
+            return false;
         }
     }
 }

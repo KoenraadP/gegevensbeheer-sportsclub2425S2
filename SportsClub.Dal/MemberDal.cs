@@ -63,15 +63,24 @@ namespace SportsClub.Dal
         {
             using (var db = new SportsClubDbContext())
             {
-                // db Add methode zet de bewerking klaar
-                db.Members.Add(member);
-                // db SaveChanges methode voert de bewerking uit
-                int numberOfchanges = db.SaveChanges();
-                // als er 1 of meer records gewijzigd zijn
-                // is de Create gelukt
-                if (numberOfchanges > 0) return true;
-                // niet gelukt --> return false
-                return false;
+                // laatste redmiddel als er toch iemand in slaagt
+                // om iets fout door te voeren --> try catch
+                try
+                {
+                    // db Add methode zet de bewerking klaar
+                    db.Members.Add(member);
+                    // db SaveChanges methode voert de bewerking uit
+                    int numberOfchanges = db.SaveChanges();
+                    // als er 1 of meer records gewijzigd zijn
+                    // is de Create gelukt
+                    if (numberOfchanges > 0) return true;
+                    // niet gelukt --> return false
+                    return false;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
     }

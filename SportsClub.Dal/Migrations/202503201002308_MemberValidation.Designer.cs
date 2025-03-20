@@ -7,13 +7,13 @@ namespace SportsClub.Dal.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class _1903 : IMigrationMetadata
+    public sealed partial class MemberValidation : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(_1903));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(MemberValidation));
         
         string IMigrationMetadata.Id
         {
-            get { return "202503191957523_1903"; }
+            get { return "202503201002308_MemberValidation"; }
         }
         
         string IMigrationMetadata.Source
