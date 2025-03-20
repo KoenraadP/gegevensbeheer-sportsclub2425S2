@@ -54,5 +54,25 @@ namespace SportsClub.Dal
                 return member;
             }
         }
+
+        // Create
+        // bool omdat we willen weten op het einde
+        // of het gelukt (true) of niet gelukt (false) is
+        // de Member die binnenkomt krijgen we van de Bll
+        public static bool Create(Member member)
+        {
+            using (var db = new SportsClubDbContext())
+            {
+                // db Add methode zet de bewerking klaar
+                db.Members.Add(member);
+                // db SaveChanges methode voert de bewerking uit
+                int numberOfchanges = db.SaveChanges();
+                // als er 1 of meer records gewijzigd zijn
+                // is de Create gelukt
+                if (numberOfchanges > 0) return true;
+                // niet gelukt --> return false
+                return false;
+            }
+        }
     }
 }

@@ -56,5 +56,16 @@ namespace SportsClub.WebApp.Controllers
                 return View("Error");
             }
         }
+
+        // Create
+        // twee methodes nodig: de eerste maakt de link naar
+        // de view aan, de tweede verwerkt de gegevens die
+        // via het formulier verstuurd worden om zo een Member
+        // met voornaam en achternaam in de databank aan te maken
+
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
