@@ -47,5 +47,19 @@ namespace SportsClub.Bll
             }
             return m;
         }
+
+        // Create
+        // hier moeten we parameters doorgeven die overeenstemmen
+        // met de properties van de Member class die ingesteld worden
+        // via het Create formulier
+        public static bool Create(string firstName, string lastName)
+        {
+            // Member aanmaken met data
+            Member member = new Member(firstName, lastName);
+            // Dal methode uitvoeren
+            bool memberCreated = MemberDal.Create(member);
+            // waarde van memberCreated als return (true of false)
+            return memberCreated;
+        }
     }
 }
