@@ -23,8 +23,7 @@ namespace SportsClub.Bll
             List<Member> lstMembers = MemberDal.ReadAll();
 
             // controleren of we effectief een correcte lijst krijgen
-            // en of deze lijst niet leeg is
-            if (lstMembers == null || lstMembers.Count == 0)
+            if (lstMembers == null)
             {
                 // eigen exception boodschap aanmaken
                 // throw stopt ook de methode
