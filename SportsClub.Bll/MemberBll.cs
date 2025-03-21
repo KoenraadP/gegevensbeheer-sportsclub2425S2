@@ -75,5 +75,24 @@ namespace SportsClub.Bll
             // geef dan false als resultaat
             return false;
         }
+
+        // Delete
+        // we krijgen het id van de te deleten member binnen
+        public static bool Delete(int id)
+        {
+            try
+            {
+                // Member opzoeken via id --> member nodig bij Dal methode
+                Member member = MemberDal.ReadOne(id);
+                // Member verwijderen via Dal
+                bool memberDeleted = MemberDal.Delete(member);
+                // waarde van memberDeleted als return (true of false)
+                return memberDeleted;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

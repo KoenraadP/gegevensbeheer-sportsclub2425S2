@@ -94,5 +94,60 @@ namespace SportsClub.WebApp.Controllers
             // feedback boodschap tonen
             return View();
         }
+
+        // DELETE
+        // twee methodes nodig, eentje om de
+        // link naar de view te te doen werken (bevestigings pagina)
+        // en eentje om de delete actie uit te voeren
+
+        public ActionResult Delete(int id)
+        {
+            // code is dezelfde als bij Details
+            try
+            {
+                // member opvragen via Bll
+                Member m = MemberBll.ReadOne(id);
+                // member doorgeven aan view
+                // View aanmaken met RMK op View, add view
+                // template Delete - model Member
+                return View(m);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
+        }
+
+        // [HttpPost] duidt aan dat dit de methode is
+        // die moet aangesproken worden bij het verzenden van
+        // het Delete <form> op de view
+        // let op: type parameter id is hier string
+        // omdat we geen twee Delete methodes met dezelfde
+        // parameter type kunnen hebben
+        [HttpPost]
+        public ActionResult Delete(string id)
+        {
+            // id omzetten naar int
+            int memberId = Convert.ToInt32(id);
+            // member verwijderen via Bll
+            bool memberDeleted = MemberBll.Delete(memberId);
+
+            // als het verwijderen van de member gelukt is
+            if (memberDeleted)
+            {
+                // feedback plaatsen in TempData
+                // TempData kan doorgegven worden via RedirectToAction
+                TempData["Feedback"] = "Member deleted.";
+                // terug keren naar de Index view
+                // we moeten dit doen met RedirectToAction
+                // omdat de volledige Index methode opnieuw moet uitgevoerd worden
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View("Error");
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,6 +79,33 @@ namespace SportsClub.Dal
                     return false;
                 }
                 catch
+                {
+                    return false;
+                }
+            }
+        }
+
+        // Delete
+        // bool omdat we willen weten op het einde
+        // of het gelukt (true) of niet gelukt (false) is
+        public static bool Delete(Member member)
+        {
+            using (var db = new SportsClubDbContext())
+            {
+                try
+                {
+                    // db.Members.Remove(member); --> werkt niet in deze versie
+                    // de status van de member op 'deleted' zetten
+                    // using System.Data.Entity; nodig bovenaan
+                    db.Entry(member).State = EntityState.Deleted;
+                    // db SaveChanges methode voert de bewerking uit
+                    int numberOfchanges = db.SaveChanges();
+                    // als er 1 of meer records gewijzigd zijn
+                    // is de Delete gelukt
+                    if (numberOfchanges > 0) return true;
+                    return false;
+                }
+                catch 
                 {
                     return false;
                 }
