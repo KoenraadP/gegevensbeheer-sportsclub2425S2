@@ -23,8 +23,7 @@ namespace SportsClub.Bll
             List<Member> lstMembers = MemberDal.ReadAll();
 
             // controleren of we effectief een correcte lijst krijgen
-            // en of deze lijst niet leeg is
-            if (lstMembers == null || lstMembers.Count == 0)
+            if (lstMembers == null)
             {
                 // eigen exception boodschap aanmaken
                 // throw stopt ook de methode
@@ -74,6 +73,25 @@ namespace SportsClub.Bll
             // als het toch ergens fout gelopen is met de if voorwaarde
             // geef dan false als resultaat
             return false;
+        }
+
+        // Delete
+        // we krijgen het id van de te deleten member binnen
+        public static bool Delete(int id)
+        {
+            try
+            {
+                // Member opzoeken via id --> member nodig bij Dal methode
+                Member member = MemberDal.ReadOne(id);
+                // Member verwijderen via Dal
+                bool memberDeleted = MemberDal.Delete(member);
+                // waarde van memberDeleted als return (true of false)
+                return memberDeleted;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

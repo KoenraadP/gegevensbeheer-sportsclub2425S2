@@ -16,8 +16,7 @@ namespace SportsClub.Bll
             List<Activity> lstActivities = ActivityDal.ReadAll();
 
             // controleren of we effectief een correcte lijst krijgen
-            // en of deze lijst niet leeg is
-            if (lstActivities == null || lstActivities.Count == 0)
+            if (lstActivities == null)
             {
                 // eigen exception boodschap aanmaken
                 // throw stopt ook de methode
