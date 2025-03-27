@@ -149,5 +149,28 @@ namespace SportsClub.WebApp.Controllers
                 return View("Error");
             }
         }
+
+        // UPDATE
+        // twee methodes nodig, eentje om de
+        // link naar de view te te doen werken (formulier)
+        // en eentje om de update actie uit te voeren
+        public ActionResult Edit(int id)
+        {
+            // code is dezelfde als bij Details
+            try
+            {
+                // member opvragen via Bll
+                Member m = MemberBll.ReadOne(id);
+                // member doorgeven aan view
+                // View aanmaken met RMK op View, add view
+                // template Edit - model Member
+                return View(m);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
+        }
     }
 }
