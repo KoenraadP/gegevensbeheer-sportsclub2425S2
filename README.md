@@ -1,1 +1,1 @@
-Zie volgende pagina voor instructies als de gedownloade versie niet goed werkt: https://creo.instructure.com/courses/7382/pages/wat-te-doen-wanneer-je-een-sportsclub-versie-van-github-downloadt?module_item_id=396197 
+Wanneer je deze versie downloadt en voor de eerste keer opstart in Visual Studio, moet je de knop 'Restore' gebruiken die in de Package Manager Console verschijnt.
