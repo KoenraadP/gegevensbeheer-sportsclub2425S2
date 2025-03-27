@@ -53,9 +53,9 @@
   <ItemGroup>
     <Compile Include="ActivityDal.cs" />
     <Compile Include="MemberDal.cs" />
-    <Compile Include="Migrations\202503201002308_MemberValidation.cs" />
-    <Compile Include="Migrations\202503201002308_MemberValidation.Designer.cs">
-      <DependentUpon>202503201002308_MemberValidation.cs</DependentUpon>
+    <Compile Include="Migrations\202503262131360_2603.cs" />
+    <Compile Include="Migrations\202503262131360_2603.Designer.cs">
+      <DependentUpon>202503262131360_2603.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +72,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202503201002308_MemberValidation.resx">
-      <DependentUpon>202503201002308_MemberValidation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202503262131360_2603.resx">
+      <DependentUpon>202503262131360_2603.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
