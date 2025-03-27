@@ -149,5 +149,57 @@ namespace SportsClub.WebApp.Controllers
                 return View("Error");
             }
         }
+
+        // UPDATE
+        // twee methodes nodig, eentje om de
+        // link naar de view te te doen werken (formulier)
+        // en eentje om de update actie uit te voeren
+        public ActionResult Edit(int id)
+        {
+            // code is dezelfde als bij Details
+            try
+            {
+                // member opvragen via Bll
+                Member m = MemberBll.ReadOne(id);
+                // member doorgeven aan view
+                // View aanmaken met RMK op View, add view
+                // template Edit - model Member
+                return View(m);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+                return View("Error");
+            }
+        }
+
+        // httppost want deze verwerkt de data van het formulier
+        // de parameters zijn de nodige informatie om de member te vinden (id)
+        // en de data die eventueel moet aangepast worden (voornaam en achternaam)
+        [HttpPost]
+        public ActionResult Edit(int id, string firstName,
+            string lastName)
+        {
+            // Bll update methode uitvoeren en resultaat opslaan
+            bool memberUpdated = MemberBll.Update(id, firstName, lastName);
+
+            // als het updaten gelukt is
+            if (memberUpdated)
+            {
+                // feedback boodschap in TempData plaatsen
+                TempData["Feedback"] = "Member updated.";
+            }
+            else
+            {
+                // feedback boodschap in TempData plaatsen
+                TempData["Feedback"] = "Something went wrong - failed to update member.";
+            }
+
+            // terugkeren naar de Details view van de member
+            // we moeten dit doen met RedirectToAction
+            // omdat de volledige Details methode opnieuw moet uitgevoerd worden
+            // Details heeft ook een id nodig om correct te kunnen werken
+            return RedirectToAction("Details", new { id = id });
+        }
     }
 }

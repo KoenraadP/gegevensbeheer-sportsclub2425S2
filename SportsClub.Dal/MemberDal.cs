@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SportsClub.Entities;
 
 namespace SportsClub.Dal
@@ -106,6 +104,35 @@ namespace SportsClub.Dal
                     return false;
                 }
                 catch 
+                {
+                    return false;
+                }
+            }
+        }
+
+        // Update
+        // bool omdat we willen weten op het einde
+        // of het gelukt (true) of niet gelukt (false) is
+        // naam parameter mag je zelf kiezen maar voor de duidelijkheid
+        // noem ik deze hier updatedMember
+        public static bool Update(Member updatedMember)
+        {
+            // db verbinding
+            using (var db = new SportsClubDbContext())
+            {
+                try
+                {
+                    // methode om record aan te passen
+                    // de AddOrUpdate zoekt naar een record met dezelfde primary key
+                    // als de updatedMember en past dan de nodige informatie aan
+                    db.Members.AddOrUpdate(updatedMember);
+                    // effectief wijzigingen in db uitvoeren met savechanges
+                    // en ook controleren of er effectief iets gewijzigd is
+                    int numberOfchanges = db.SaveChanges();
+                    if (numberOfchanges > 0) return true;
+                    return false;
+                }
+                catch
                 {
                     return false;
                 }
