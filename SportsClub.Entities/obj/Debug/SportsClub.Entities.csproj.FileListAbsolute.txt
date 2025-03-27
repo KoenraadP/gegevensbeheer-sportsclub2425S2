@@ -16,3 +16,9 @@ C:\Users\koenraad.pecceu\Documents\gegevensbeheer\gegevensbeheer-sportsclub2425S
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\gegevensbeheer-sportsclub2425S2\SportsClub.Entities\obj\Debug\SportsClub.Entities.csproj.CoreCompileInputs.cache
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\gegevensbeheer-sportsclub2425S2\SportsClub.Entities\obj\Debug\SportsClub.Entities.dll
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\gegevensbeheer-sportsclub2425S2\SportsClub.Entities\obj\Debug\SportsClub.Entities.pdb
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Entities\bin\Debug\SportsClub.Entities.dll
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Entities\bin\Debug\SportsClub.Entities.pdb
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Entities\obj\Debug\SportsClub.Entities.csproj.AssemblyReference.cache
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Entities\obj\Debug\SportsClub.Entities.csproj.CoreCompileInputs.cache
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Entities\obj\Debug\SportsClub.Entities.dll
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Entities\obj\Debug\SportsClub.Entities.pdb

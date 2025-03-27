@@ -53,9 +53,9 @@
   <ItemGroup>
     <Compile Include="ActivityDal.cs" />
     <Compile Include="MemberDal.cs" />
-    <Compile Include="Migrations\202503262131360_2603.cs" />
-    <Compile Include="Migrations\202503262131360_2603.Designer.cs">
-      <DependentUpon>202503262131360_2603.cs</DependentUpon>
+    <Compile Include="Migrations\202503271801557_Reset.cs" />
+    <Compile Include="Migrations\202503271801557_Reset.Designer.cs">
+      <DependentUpon>202503271801557_Reset.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +72,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202503262131360_2603.resx">
-      <DependentUpon>202503262131360_2603.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202503271801557_Reset.resx">
+      <DependentUpon>202503271801557_Reset.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

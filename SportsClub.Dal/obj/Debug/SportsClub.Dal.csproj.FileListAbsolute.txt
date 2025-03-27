@@ -79,5 +79,5 @@ D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Dal\obj\Debug\SportsClub.Da
 D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Dal\obj\Debug\SportsClub.Dal.pdb
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\gegevensbeheer-sportsclub2425S2\SportsClub.Dal\obj\Debug\SportsClub.Dal.Migrations.MemberValidation.resources
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\gegevensbeheer-sportsclub2425S2\SportsClub.Dal\obj\Debug\SportsClub.Dal.csproj.GenerateResource.cache
-D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Dal\obj\Debug\SportsClub.Dal.Migrations._2603.resources
+D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Dal\obj\Debug\SportsClub.Dal.Migrations.Reset.resources
 D:\gegevensbeheer2425s2\lesmap\SportsClub\SportsClub.Dal\obj\Debug\SportsClub.Dal.csproj.GenerateResource.cache
