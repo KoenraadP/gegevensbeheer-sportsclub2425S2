@@ -93,5 +93,36 @@ namespace SportsClub.Bll
                 return false;
             }
         }
+
+        // UPDATE
+        // we krijgen de id van de te updaten member binnen
+        // dit is nodig omdat we een bestaande record moeten aanpassen
+        // de nieuwe voornaam en achternaam komen ook binnen als parameters
+        public static bool Update(int id, string updatedFirstName,
+            string updatedLastName)
+        {
+            // Member opzoeken via id --> member nodig bij Dal methode
+            Member member = MemberDal.ReadOne(id);
+
+            // eerst weer eventuele spaties verwijderen net als bij Create
+            updatedFirstName = updatedFirstName.Trim();
+            updatedLastName = updatedLastName.Trim();
+
+            // controleren of de nieuwe namen niet leeg of null zijn
+            if (!string.IsNullOrEmpty(updatedFirstName)
+                && !string.IsNullOrEmpty(updatedLastName))
+            {
+                // Member updaten met nieuwe data
+                member.FirstName = updatedFirstName;
+                member.LastName = updatedLastName;
+                // Dal methode uitvoeren
+                bool memberUpdated = MemberDal.Update(member);
+                // waarde van memberUpdated als return (true of false)
+                return memberUpdated;
+            }
+
+            // toch nog iets mislukt? return false
+            return false;
+        }
     }
 }
