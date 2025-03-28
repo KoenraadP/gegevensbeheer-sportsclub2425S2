@@ -9,3 +9,4 @@ Wanneer je deze versie voor de eerste keer opent na downloaden:
         * Eventueel om zeker te zijn Visual Studio nog eens afsluiten en opnieuw opstarten
         * Ten slotte nog eens de drie commando's uitvoeren
 * In het Dal project: open de map Migrations en verwijder daarin alle bestanden BEHALVE Configuration.cs
+* Zie je nog errors verschijnen: klik met de rechtermuisknop op de SOLUTION en kies Rebuild Solution
