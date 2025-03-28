@@ -29,6 +29,20 @@
             @Html.DisplayFor(model => model.LastName)
         </dd>
 
+        @* code om foto te tonen*@
+        @* eerst de naam van de property (dit zal gewoon Picture zijn) *@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+
+        @* dan de waarde van de property *@
+        @* let erop dat je Model hier met een hoofdletter moet typen *@
+        <dd>
+            <img src="~/Content/images/memberpics/@Model.Picture" width="200"
+                 alt="Picture of @Model.FirstName @Model.LastName" />
+        </dd>
+
     </dl>
 </div>
 <p>

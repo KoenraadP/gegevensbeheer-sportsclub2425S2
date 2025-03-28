@@ -125,6 +125,7 @@ namespace SportsClub.Dal
                     // methode om record aan te passen
                     // de AddOrUpdate zoekt naar een record met dezelfde primary key
                     // als de updatedMember en past dan de nodige informatie aan
+                    // de .AddOrUpdate() methode komt uit System.Data.Entity.Migrations;
                     db.Members.AddOrUpdate(updatedMember);
                     // effectief wijzigingen in db uitvoeren met savechanges
                     // en ook controleren of er effectief iets gewijzigd is

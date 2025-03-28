@@ -1,6 +1,7 @@
 ﻿using SportsClub.Entities;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -72,11 +73,45 @@ namespace SportsClub.WebApp.Controllers
         // die moet aangesproken worden bij het verzenden van
         // onze POST form
         // parameters moeten exact gespeld zijn zoals de properties van de Member class
+        // HttpPostedFileBase is het type van de geüploade foto dat binnen komt via de form
         [HttpPost]
-        public ActionResult Create(string firstName, string lastName)
+        public ActionResult Create(string firstName, string lastName,
+            HttpPostedFileBase picture)
         {
+            // standaard foto instellen op unknown.jpg
+            string pictureName = "unknown.jpg";
+
+            // als er effectief een foto werd geüpload
+            if (picture != null)
+            {
+                // controleren of type file jpg/png is
+                if (picture.ContentType == "image/jpeg"
+                    || picture.ContentType == "image/png")
+                {
+                    // variabele aanmaken om pad op te slaan
+                    // waar we de foto willen bewaren
+                    // Server.MapPath() zorgt ervoor dat we de juiste
+                    // map op onze server vinden onafhankelijk van welke 
+                    // computer er gebruikt wordt, welk besturingssysteem, ...
+                    // het tilde teken (~) verwijst naar onze WebApp folder
+                    string pathToSave = Server.MapPath("~/Content/images/memberpics/");
+                    // extensie van file er apart uit halen (dus de .jpg / .jpeg / .png)
+                    // Path komt uit System.IO
+                    string extension = Path.GetExtension(picture.FileName);
+                    // unieke naam genereren voor de foto
+                    // dit om te zorgen dat we niet per ongeluk foto's overschrijven
+                    pictureName = Guid.NewGuid() + extension;
+                    // pad vervolledigen
+                    // (dit wordt dan bijvoorbeeld C:\Users\...\WebApp\Content\images\memberpics\166976a0-77f1-4f3e-aff1-f629bd8d3564.jpg)
+                    pathToSave += pictureName;
+                    // foto effectief opslaan op de server in de juiste map
+                    picture.SaveAs(pathToSave);
+                }
+            }
+
             // de Create methode uit de Bll uitvoeren en resultaat (true/false opslaan)
-            bool memberCreated = MemberBll.Create(firstName, lastName);
+            // we geven hier enkel de NAAM van de foto door
+            bool memberCreated = MemberBll.Create(firstName, lastName, pictureName);
 
             // als het aanmaken van de member gelukt is
             if (memberCreated)
