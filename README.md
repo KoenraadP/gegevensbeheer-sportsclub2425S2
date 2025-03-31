@@ -9,4 +9,5 @@ Wanneer je deze versie voor de eerste keer opent na downloaden:
         * Eventueel om zeker te zijn Visual Studio nog eens afsluiten en opnieuw opstarten
         * Ten slotte nog eens de drie commando's uitvoeren
 * In het Dal project: open de map Migrations en verwijder daarin alle bestanden BEHALVE Configuration.cs
+* In het Dal project: open het bestand SportsClubDbContext en controleer of de connection string wel klopt (zie: https://creo.instructure.com/courses/7382/pages/connection-strings-sportsclubdb?module_item_id=417497 )
 * Zie je nog errors verschijnen: klik met de rechtermuisknop op de SOLUTION en kies Rebuild Solution
